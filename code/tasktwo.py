@@ -1,6 +1,7 @@
 import csv
 
 def process_sales_data(daily_sales_csvs,sales_writer):
+    sales_writer.writerow(['sales','date','region'])
     for sales_data in daily_sales_csvs:
         with open(sales_data) as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
